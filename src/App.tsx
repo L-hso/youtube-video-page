@@ -6,7 +6,7 @@ function App() {
   const [menuVisibility, setMenuVisibility] = useState(false);
 
   return (
-    <>
+    <div className="w-screen h-screen">
       <Navbar.Root
         menuVisibility={menuVisibility}
         toggleMenuVisibility={setMenuVisibility}
@@ -15,7 +15,7 @@ function App() {
       </Navbar.Root>
       <Navbar.Aside visible={menuVisibility} />
     <Main.Root><></></Main.Root>
-    </>
+    </div>
   );
 }
 
