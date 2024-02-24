@@ -7,14 +7,17 @@ function App() {
 
   return (
     <>
+    <header>
       <Navbar.Root
         menuVisibility={menuVisibility}
         toggleMenuVisibility={setMenuVisibility}
       >
         <Navbar.SearchBar/>
+        <Navbar.Notification/> 
       </Navbar.Root>
       <Navbar.Aside visible={menuVisibility} />
-    <Main.Root><></></Main.Root>
+    </header>
+    <Main.Root visible={menuVisibility}><></></Main.Root>
     </>
   );
 }

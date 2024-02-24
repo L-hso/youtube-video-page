@@ -37,8 +37,7 @@ export function NavbarAside({ visible }: { visible: boolean }) {
     <>
       <aside
         data-ativo={visible}
-        className="bg-youtube-darkest overflow-y-auto no-scrollbar transition-transform duration-300 -translate-x-full hidden flex-col justify-start items-around 
-      max-w-60 p-4  data-[ativo=true]:flex data-[ativo=true]:translate-x-0 *:text-white *:*:"
+        className="bg-youtube-darkest overflow-y-auto no-scrollbar transition-transform duration-300 -translate-x-full  flex-col justify-start items-around max-w-60 px-4 py-2 data-[ativo=true]:translate-x-0 *:text-white absolute bottom-0 h-[calc(100%-3.5rem)] z-10"
       >
         <ul className="py-4 flex flex-col">
           <li className={FIRST_OPTIONS_STYLES[0]}>

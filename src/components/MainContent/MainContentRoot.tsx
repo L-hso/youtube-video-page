@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-export function MainContentRoot({children}:{children:ReactNode}){
+export function MainContentRoot({children, visible}:{children:ReactNode, visible:boolean}){
   return (
-    <main className="overflow-none  w-[98.5vw] h-[98.5vh] bg-youtube-dark">
-      {children}
+    <main data-escurecido={visible} className="group w-screen h-[calc(100vh-3.5rem)] bg-youtube-darkest overflow-hidden">
+      <div className="group-data-[escurecido=true]:opacity-45 z-[-1] transition-opacity duration-300 w-full h-full">{children}</div>
     </main>
   );
 }

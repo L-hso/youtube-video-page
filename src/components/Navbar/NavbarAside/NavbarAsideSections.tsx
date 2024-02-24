@@ -15,12 +15,12 @@ export function NavbarAsideSection({
       {sectionOptions.map(
         (option, index): ReactNode => (
           <li
-            className="flex self-start items-center w-full hover:bg-youtube-dark p-1 truncate"
+            className="self-start w-full truncate"
             key={index}
           >
-            <a href="#" className="text-[0.95rem] flex gap-5 p-1 truncate">
+            <a href="#" className="text-[0.95rem] flex items-center gap-5 p-2 w-full hover:bg-youtube-dark rounded-xl">
             <i>{sideMenuIcons[option]}</i>
-              {option}
+              <span className="line-clamp-2 truncate inline-block">{option}</span>
             </a>
           </li>
         )
