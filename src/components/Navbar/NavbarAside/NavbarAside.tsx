@@ -31,52 +31,52 @@ export function NavbarAside({ visible }: { visible: boolean }) {
     ],
   };
 
-  const FIRST_OPTIONS_STYLES = ["flex self-start items-center w-full hover:bg-youtube-dark p-1 truncate", "text-[0.95rem] flex gap-5 p-1 truncate"];
+  const FIRST_OPTIONS_STYLES = ["flex self-start items-center w-full hover:bg-youtube-dark p-1 rounded-xl", "text-[0.95rem] flex gap-5 p-1 rounded-xl"];
 
   return (
     <>
       <aside
         data-ativo={visible}
-        className="bg-youtube-darkest overflow-y-auto no-scrollbar transition-transform duration-300 -translate-x-full  flex-col justify-start items-around max-w-60 px-4 py-2 data-[ativo=true]:translate-x-0 *:text-white absolute bottom-0 h-[calc(100%-3.5rem)] z-10"
+        className="bg-youtube-darkest overflow-y-auto new-scrollbar transition-transform duration-300 -translate-x-full  flex-col justify-start items-around max-w-[15.5rem] px-4 py-2 data-[ativo=true]:translate-x-0 *:text-white absolute bottom-0 h-[calc(100%-3.5rem)] z-10"
       >
         <ul className="py-4 flex flex-col">
           <li className={FIRST_OPTIONS_STYLES[0]}>
             <a href="#" className={FIRST_OPTIONS_STYLES[1]}>
-              <Home />
+              <Home size={21.5}/>
               Início
             </a>
           </li>
           <li className={FIRST_OPTIONS_STYLES[0]}>
             <a href="#" className={FIRST_OPTIONS_STYLES[1]}>
-              <Play />
+              <Play size={21.5}/>
               Shorts
             </a>
           </li>
           <li className={FIRST_OPTIONS_STYLES[0]}>
             <a href="#" className={FIRST_OPTIONS_STYLES[1]}>
-              <Users />
+              <Users size={21.5}/>
               Inscrições
             </a>
           </li>
         </ul>
-        <hr />
+        <hr className="w-full border-[#555] h-[1.5px]"/>
 
         <NavbarAsideSection
           sectionName="Você"
           sectionOptions={sideMenuOptions["Você"]}
         />
 
-        <hr />
+        <hr className="w-full border-[#555] h-[1.5px]"/>
         <NavbarAsideSection
           sectionName="Inscrições"
           sectionOptions={sideMenuOptions["Inscrições"]}
         />
-        <hr />
+        <hr className="w-full border-[#555] h-[1.5px]"/>
         <NavbarAsideSection
           sectionName="Explorar"
           sectionOptions={sideMenuOptions["Explorar"]}
         />
-        <hr />
+        <hr className="w-full border-[#555] h-[1.5px]"/>
         <NavbarAsideSection
           sectionName="Mais do Youtube"
           sectionOptions={sideMenuOptions["Mais do Youtube"]}

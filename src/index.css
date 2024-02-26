@@ -3,12 +3,24 @@
 @tailwind utilities;
 
 @layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display:none
+
+  
+
+  .new-scrollbar::-webkit-scrollbar{
+    width: 15px;
   }
 
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  .new-scrollbar::-webkit-scrollbar-track{
+    background: #292929;
+  }
+
+  .new-scrollbar::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: calc(100vw - 3.5rem);
+    border: 4px solid #292929;
+  }
+
+  .new-scrollbar::-webkit-scrollbar-thumb:hover{
+    background: #777;
   }
 }

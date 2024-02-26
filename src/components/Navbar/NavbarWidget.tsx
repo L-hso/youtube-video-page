@@ -1,5 +1,5 @@
 import { NavbarAside } from "./NavbarAside/NavbarAside";
-import { NavbarNotification } from "./NavbarUser/NavbarNotification";
+import { NavbarNotificationControl } from "./NavbarUser/NavbarNotifications/NavbarNotificationControl";
 import { NavbarRoot } from "./NavbarRoot";
 import { NavbarSearchBar } from "./NavbarSearchBar";
 
@@ -8,5 +8,5 @@ export const Navbar = {
   Root: NavbarRoot,
   Aside: NavbarAside,
   SearchBar: NavbarSearchBar,
-  Notification: NavbarNotification
+  Notification: NavbarNotificationControl
 }
