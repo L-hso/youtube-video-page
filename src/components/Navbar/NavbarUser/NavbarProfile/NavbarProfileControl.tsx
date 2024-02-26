@@ -42,7 +42,7 @@ export function NavbarProfile({
       </button>
       <div
         data-ativo={profileVisibility == "profile"}
-        className="data-[ativo=true]:flex data-[ativo=false]:hidden flex-col absolute right-[105%] top-0 bg-youtube-dark rounded-md text-white overflow-hidden max-h-[calc(100vh-3.5rem)]"
+        className="data-[ativo=true]:flex data-[ativo=false]:hidden flex-col absolute right-0 top-[105%] bg-youtube-dark rounded-md text-white overflow-hidden max-h-[calc(100vh-5rem)]"
       >
         <div className="flex items-start justify-start gap-3 px-2 py-4 w-[19.5rem]">
           <img

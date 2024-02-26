@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Navbar } from "./components/Navbar/NavbarWidget";
-import { Main } from "./components/MainContent/Widget";
+import { Navbar } from "./components/Navbar/Widget";
+import { Content } from "./components/Content/Widget";
 import { NavbarUser } from "./components/Navbar/NavbarUser/Widget";
 
 function App() {
@@ -31,13 +31,13 @@ function App() {
         </Navbar.Root>
         <Navbar.Aside visible={menuVisibility} />
       </header>
-      <Main.Root
+      <Content.Root
         visible={menuVisibility}
         userOff={setUserVisibility}
         sideMenuOff={setMenuVisibility}
       >
-        <></>
-      </Main.Root>
+        <Content.Principal/>
+      </Content.Root>
     </>
   );
 }

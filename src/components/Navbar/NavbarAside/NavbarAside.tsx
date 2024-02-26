@@ -31,7 +31,7 @@ export function NavbarAside({ visible }: { visible: boolean }) {
     ],
   };
 
-  const FIRST_OPTIONS_STYLES = ["flex self-start items-center w-full hover:bg-youtube-dark p-1 rounded-xl", "text-[0.95rem] flex gap-5 p-1 rounded-xl"];
+  const FIRST_OPTIONS_STYLES = ["self-start w-full", "text-[0.95rem] flex items-center gap-5 p-2 w-full hover:bg-youtube-dark rounded-xl"];
 
   return (
     <>
@@ -42,20 +42,20 @@ export function NavbarAside({ visible }: { visible: boolean }) {
         <ul className="py-4 flex flex-col">
           <li className={FIRST_OPTIONS_STYLES[0]}>
             <a href="#" className={FIRST_OPTIONS_STYLES[1]}>
-              <Home size={21.5}/>
-              Início
+            <i><Home size={21.5}/></i>
+              <span className="line-clamp-2 truncate inline-block">Início</span>
             </a>
           </li>
           <li className={FIRST_OPTIONS_STYLES[0]}>
             <a href="#" className={FIRST_OPTIONS_STYLES[1]}>
-              <Play size={21.5}/>
-              Shorts
+              <i><Play size={21.5}/></i>
+              <span className="line-clamp-2 truncate inline-block">Shorts</span>
             </a>
           </li>
           <li className={FIRST_OPTIONS_STYLES[0]}>
             <a href="#" className={FIRST_OPTIONS_STYLES[1]}>
-              <Users size={21.5}/>
-              Inscrições
+              <i><Users size={21.5}/></i>
+              <span className="line-clamp-2 truncate inline-block">Inscrições</span>
             </a>
           </li>
         </ul>
