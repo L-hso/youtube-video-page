@@ -36,7 +36,7 @@ function App() {
         userOff={setUserVisibility}
         sideMenuOff={setMenuVisibility}
       >
-        <Content.Principal/>
+        <Content.PrincipalVideo/>
       </Content.Root>
     </>
   );
