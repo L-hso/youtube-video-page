@@ -4,6 +4,6 @@ import { ContentRoot } from "./ContentRoot";
 
 export const Content = {
   Root: ContentRoot,
-  Principal: ContentPrincipalVideo,
+  PrincipalVideo: ContentPrincipalVideo,
   Videos: ContentLateralVideos
 };
