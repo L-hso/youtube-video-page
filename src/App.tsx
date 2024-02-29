@@ -4,11 +4,13 @@ import { Content } from "./components/Content/Widget";
 import { NavbarUser } from "./components/Navbar/NavbarUser/Widget";
 
 function App() {
+
   const [menuVisibility, setMenuVisibility] = useState(false);
   const [userVisibility, setUserVisibility] = useState("none");
+
   return (
     <>
-      <header>
+        <header className="fixed top-0 w-full">
         <Navbar.Root
           menuVisibility={menuVisibility}
           toggleMenuVisibility={setMenuVisibility}
@@ -30,13 +32,17 @@ function App() {
           </NavbarUser.Root>
         </Navbar.Root>
         <Navbar.Aside visible={menuVisibility} />
-      </header>
+        </header>
       <Content.Root
         visible={menuVisibility}
         userOff={setUserVisibility}
         sideMenuOff={setMenuVisibility}
       >
-        <Content.Principal/>
+        <Content.Principal.Root>
+          <Content.Principal.Video />
+          <Content.Lateral.Root responsiveVisibility={['lg:hidden', 'flex']}><></></Content.Lateral.Root>
+        </Content.Principal.Root>
+        <Content.Lateral.Root responsiveVisibility={['lg:flex', 'hidden']}><></></Content.Lateral.Root>
       </Content.Root>
     </>
   );

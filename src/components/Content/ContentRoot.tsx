@@ -16,15 +16,13 @@ export function ContentRoot({
   return (
     <main
       data-escurecido={visible}
-      className="group w-screen min-h-[calc(100vh-3.5rem)] bg-youtube-darkest overflow-y-scroll new-scrollbar"
+      className="w-full min-h-[calc(100vh-3.5rem)] data-[escurecido=true]:opacity-45 transition-opacity duration-300 h-full px-6 py-7 grid grid-cols-3 gap-5 -z-20 absolute top-14"
       onClick={() => {
         sideMenuOff(false);
         userOff("none");
       }}
     >
-      <div className="group-data-[escurecido=true]:opacity-45 z-60 transition-opacity duration-300 w-full h-full">
-      </div>
-      {children}
+{children}
     </main>
   );
 }

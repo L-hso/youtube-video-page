@@ -1,4 +1,4 @@
-import { NavbarAside } from "./NavbarAside/NavbarAside";
+import { NavbarAside } from "./NavbarAside/NavbarMenuLateral";
 import { NavbarNotificationControl } from "./NavbarUser/NavbarNotifications/NavbarNotificationControl";
 import { NavbarRoot } from "./NavbarRoot";
 import { NavbarSearchBar } from "./NavbarSearchBar";

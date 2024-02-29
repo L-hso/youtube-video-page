@@ -1,9 +1,9 @@
-import { ContentLateralVideos } from "./ContentLateral/ContentLateralVideos";
-import { ContentPrincipalVideo } from "./ContentPrincipal/ContentPrincipalVideo";
+import { Lateral } from "./ContentLateral/Widget";
+import { Principal } from "./ContentPrincipal/Widget";
 import { ContentRoot } from "./ContentRoot";
 
 export const Content = {
   Root: ContentRoot,
-  Principal: ContentPrincipalVideo,
-  Videos: ContentLateralVideos
+  Principal,
+  Lateral,
 };

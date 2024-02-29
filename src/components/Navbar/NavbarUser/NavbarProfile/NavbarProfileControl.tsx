@@ -27,18 +27,13 @@ export function NavbarProfile({
   return (
     <div className="relative">
       <button
-        className="hover:bg-youtube-gray p-1.5 rounded-full flex items-center"
+        className="hover:bg-youtube-gray p-1.5 rounded-full bg-[url('https://i1.sndcdn.com/artworks-QZ4Y5bsDEMAIb7d8-G5oQQw-t500x500.jpg')] w-[24px] h-[24px] bg-cover"
         onClick={() =>
           setProfileVisibility(
             profileVisibility == "profile" ? "none" : "profile"
           )
         }
       >
-        <img
-          src="https://i1.sndcdn.com/artworks-QZ4Y5bsDEMAIb7d8-G5oQQw-t500x500.jpg"
-          alt="foto de perfil"
-          className="w-[calc(21.5px+0.375rem)] h-[calc(21.5px+0.375rem)] rounded-full"
-        />
       </button>
       <div
         data-ativo={profileVisibility == "profile"}

@@ -13,7 +13,7 @@ export function NavbarRoot({
   toggleMenuVisibility,
 }: NavbarRoot) {
   return (
-    <nav className="w-full p-1.5 pr-4 h-14 bg-youtube-darkest sticky top-0 flex items-center justify-between z-20">
+    <nav className="w-full p-1.5 pl-4 pr-6 h-14 bg-youtube-darkest flex items-center justify-between z-30">
       <button
         className="px-2 py-2 rounded-full hover:bg-youtube-dark"
         onClick={(): void => toggleMenuVisibility(menuVisibility == false)}

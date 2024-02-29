@@ -1,5 +1,9 @@
-export function ContentPrincipalVideo(){
-  return (<div>
-    <video src="https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"></video>
-  </div>);
+export function ContentPrincipalVideo() {
+  return (
+    <div className="">
+      <video src="src\assets\Não fui feito para Programar != Bloqueado no Código.mp4" className="rounded-md"
+      
+      disablePictureInPicture disableRemotePlayback/>
+    </div>
+  );
 }
