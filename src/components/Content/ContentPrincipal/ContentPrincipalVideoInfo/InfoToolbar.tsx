@@ -14,26 +14,26 @@ export function InfoToolbar() {
             279 mil inscritos
           </span>
         </div>
-        <button className="border-youtube-light-gray border-[1px] bg-youtube-darkest rounded-full text-sm text-white font-semibold py-1.5 w-[7.5rem]">
+        <button className="border-youtube-gray border-[1px] bg-youtube-darkest rounded-full text-sm text-white font-semibold py-1.5 w-[7.5rem] hover:bg-youtube-gray">
           Seja Membro
         </button>
-        <button className="border-[1px] bg-white rounded-full text-sm text-youtube-darkest font-semibold py-1.5 w-[7.5rem]">
+        <button className="border-[1px] bg-white rounded-full text-sm text-youtube-darkest font-semibold py-1.5 w-[7.5rem] hover:bg-gray-200">
           Inscrever-se
         </button>
       </li>
 
       <li className="flex items-center gap-4">
         <div className="flex items-center bg-youtube-gray rounded-full">
-          <button className="flex items-center gap-2 rounded-l-full py-1.5 px-3 text-white font-semibold">
+          <button className="flex items-center h-9 gap-2 rounded-l-full py-1.5 px-3 text-white font-semibold hover:bg-[#555]">
             <ThumbsUp size={20}/>
             50 mil
           </button>
-          <div className="w-[1px] h-[25px] bg-[#777]"></div>
-          <button className="flex items-center gap-2 py-1.5 px-3 rounded-r-full text-white">
+          <div className="w-[1px] h-[25px] bg-[#777]"/>
+          <button className="flex items-center h-9 gap-2 rounded-r-full py-1.5 px-3 text-white font-semibold hover:bg-[#555]">
             <ThumbsDown size={20}/>
           </button>
         </div>
-        <button className="flex items-center gap-2 py-1.5 px-3  rounded-full text-white font-semibold bg-youtube-gray">
+        <button className="flex items-center h-9 gap-2 py-1.5 px-3 rounded-full text-white font-semibold bg-youtube-gray hover:bg-[#555]">
           <PiShareFat size={20}/>
           Compartilhar
         </button>

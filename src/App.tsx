@@ -39,6 +39,7 @@ function App() {
         sideMenuOff={setMenuVisibility}
       >
         <Content.Principal.Root>
+          
           <Content.Principal.Video />
           <Content.Principal.Info/>
           <Content.Lateral.Root responsiveVisibility={['lg:hidden', 'flex']}><></></Content.Lateral.Root>

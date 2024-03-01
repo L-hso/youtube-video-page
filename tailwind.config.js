@@ -12,7 +12,6 @@ export default {
         'youtube-gray':'#3d3d3d',
         'youtube-light-gray':'#aaaaaa'
       },
-
     },
   },
   plugins: [

@@ -1,6 +1,8 @@
 import { InfoToolbar } from "./InfoToolbar";
 
 
+
+
 export function ContentPrincipalVideoInfo(){
   return (
     <div className="w-full flex flex-col gap-3 py-2">
@@ -8,7 +10,7 @@ export function ContentPrincipalVideoInfo(){
       <InfoToolbar/>
       <article className="bg-youtube-gray text-white py-3 px-4 rounded-xl">
         <header className="font-bold"><span>260 mil Visualizações</span><span className="ml-2">há 3 meses</span></header>
-        <p className="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis quisquam distinctio facere ratione animi quaerat corrupti nesciunt laboriosam consequatur. Mollitia blanditiis odio, ut reiciendis repellendus voluptatem omnis velit esse!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officiis quisquam distinctio facere ratione animi quaerat corrupti nesciunt laboriosam consequatur. Mollitia blanditiis odio, ut reiciendis repellendus voluptatem omnis velit esse!</p>
       </article>
     </div>
   );
