@@ -1,5 +1,5 @@
 import { ContentPrincipalRoot } from "./ContentPrincipalRoot";
-import { ContentPrincipalVideo } from "./ContentPrincipalVideo";
+import { ContentPrincipalVideo } from "./ContentPrincipalVideo/ContentPrincipalVideo";
 import { ContentPrincipalVideoInfo } from "./ContentPrincipalVideoInfo/ContentPrincipalInfo";
 
 export const Principal = {
