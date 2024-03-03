@@ -3,8 +3,8 @@ import { PiShareFat } from "react-icons/pi";
 
 export function InfoToolbar() {
   return (
-    <menu className="w-full flex items-center justify-between">
-      <li className="flex items-center gap-3">
+    <menu className="w-full flex flex-wrap gap-2 items-center justify-between">
+      <li className="flex flex-wrap items-center gap-3">
         <a href="#">
       <img src="https://i.pinimg.com/236x/de/76/4d/de764d1ed49286039e6ab830d622f86f.jpg" alt="icone yt" width={45} height={45} className="rounded-full"/></a>
         <div className="min-w-20 max-w-32">
@@ -25,11 +25,11 @@ export function InfoToolbar() {
         </button>
       </li>
 
-      <li className="flex items-center gap-4">
-        <div className="flex items-center bg-youtube-gray rounded-full">
+      <li className="flex flex-wrap items-center gap-4">
+        <div className="group flex items-center bg-youtube-gray rounded-full">
           <button className="flex items-center h-9 gap-2 rounded-l-full py-1.5 px-3 text-white font-semibold hover:bg-[#555]">
             <ThumbsUp size={20}/>
-            <span className="max-[768px]:inline hidden">50 mil</span>
+            <span className="inline">50 mil</span>
           </button>
           <div className="w-[1px] h-[25px] bg-[#777]"/>
           <button className="flex items-center h-9 gap-2 rounded-r-full py-1.5 px-3 text-white font-semibold hover:bg-[#555]">
@@ -38,7 +38,7 @@ export function InfoToolbar() {
         </div>
         <button className="flex items-center h-9 gap-2 py-1.5 px-3 rounded-full text-white font-semibold bg-youtube-gray hover:bg-[#555]">
           <PiShareFat size={20}/>
-          <span className="max-[768px]:inline hidden">Compartilhar</span>
+          <span>Compartilhar</span>
         </button>
       </li>
     </menu>
