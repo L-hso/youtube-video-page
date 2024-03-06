@@ -1,3 +1,5 @@
+import { Radio } from "lucide-react";
+
 export const LateralVideosInfo = {
   1: {
     imagem: "#",
@@ -31,7 +33,8 @@ export const LateralVideosInfo = {
     canal: "Mussolini e seus amigos",
     visualizacoes: "74 mil visualizações",
     envio: "há 2 anos",
-    duracao: "7:27"
+    duracao: "7:27",
+    tag: (<span className="inline-flex items-center gap-1 px-[2px] bg-youtube-gray font-sans font-medium text-xs">Novo</span>)
   },
   5: {
     imagem: "#",
@@ -47,7 +50,8 @@ export const LateralVideosInfo = {
     titulo: "Laxante natural",
     canal: "Ministério da Justiça",
     visualizacoes: "2.35 bi de visualizações",
-    envio: "há 11 meses",duracao: "13:22"
+    envio: "há 11 meses",duracao: "13:22",
+    tag:(<div className="inline-flex items-center gap-1 px-[2px] bg-red-600 font-sans font-medium text-xs"><Radio size={15}/> AO VIVO</div>)
   },
   7:{
     imagem: "#",

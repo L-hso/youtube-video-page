@@ -1,27 +1,56 @@
+import { Clock, ListVideo } from "lucide-react";
+import { ReactNode } from "react";
+
 interface LateralVideo {
-  informations: { imagem: string,titulo:string, canal:string, visualizacoes:string, envio:string, duracao:string}, index:number;
+  informations: {
+    imagem: string;
+    titulo: string;
+    canal: string;
+    visualizacoes: string;
+    envio: string;
+    duracao: string;
+    tag?: ReactNode;
+  };
+  index: number;
 }
 
-export function LateralVideo({
-  informations,
-  index
-}: LateralVideo) {
+export function LateralVideo({ informations, index }: LateralVideo) {
+
+
+
   return (
     <li key={index} className="flex w-full gap-2 *:text-white">
       {/* <img src={informations.imagem} alt="video" className="object-cover w-40 h-24 rounded-lg"/> */}
-      <div className={`group w-40 h-24 rounded-lg flex-shrink-0 bg-violet-500 
-      relative after:invisible group-hover:after:visible after:content-["19:45"] after:absolute after:bottom-2 after:right-2 
-      after:bg-[rgba(0,0,0,0.66)] after:px-[2px] after:text-[0.70rem] after:font-sans`}/>
-      <div className="flex flex-col justify-between">
-      <span className="text-base font-semibold line-clamp-2">{informations.titulo}</span> 
-      <div>
-        <span className="text-sm text-youtube-light-gray line-clamp-1">{informations.canal}</span>
-        <div>
-          <span className="text-sm text-youtube-light-gray line-clamp-1">
-            {informations.visualizacoes} - {informations.envio}
-          </span>
+      <div
+    
+        className={`group w-40 h-24 rounded-lg flex-shrink-0 bg-violet-500 
+      relative 
+      `}
+      >
+        <span className="inline-block  transition-opacity duration-400 group-hover:opacity-0 absolute bottom-2 right-2 bg-[rgba(0,0,0,0.66)] px-[2.5px] text-[0.70rem] font-sans text-center">{informations.duracao}</span>
+        <div className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-out absolute right-1 top-1 flex flex-col gap-1">
+        <Clock size={22.5} className="bg-[rgba(0,0,0,0.66)] p-[2px] cursor-pointer"/> 
+        <ListVideo size={22.5} className="bg-[rgba(0,0,0,0.66)] p-[2px] cursor-pointer"/>
         </div>
+        
       </div>
+      <div className="flex flex-col h-24">
+        <span className="justify-self-start text-base font-semibold line-clamp-2">
+          <a href="#">{informations.titulo}</a>
+        </span>
+        <div className="justify-self-end">
+          <span className="text-sm text-youtube-light-gray line-clamp-1">
+            <a href="#">
+            {informations.canal}
+            </a>
+          </span>
+          <div>
+            <span className="text-sm text-youtube-light-gray line-clamp-1">
+              {informations.visualizacoes} - {informations.envio}
+            </span>
+            {informations.tag||<></>}
+          </div>
+        </div>
       </div>
     </li>
   );
