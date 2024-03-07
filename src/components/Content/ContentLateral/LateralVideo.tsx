@@ -34,22 +34,22 @@ export function LateralVideo({ informations, index }: LateralVideo) {
         </div>
         
       </div>
-      <div className="flex flex-col h-24">
-        <span className="justify-self-start text-base font-semibold line-clamp-2">
-          <a href="#">{informations.titulo}</a>
+      <div className="flex flex-col h-24 items-start">
+
+
+        <span>
+          <a className="justify-self-start leading-5 font-semibold line-clamp-2" href="#">{informations.titulo}</a>
         </span>
+
+
         <div className="justify-self-end">
-          <span className="text-sm text-youtube-light-gray line-clamp-1">
-            <a href="#">
-            {informations.canal}
-            </a>
-          </span>
-          <div>
-            <span className="text-sm text-youtube-light-gray line-clamp-1">
+        <span className="text-sm text-youtube-light-gray line-clamp-1">
+        <a href="#" className="text-sm text-youtube-light-gray line-clamp-1">
+          {informations.canal}
+        </a>
               {informations.visualizacoes} - {informations.envio}
-            </span>
-            {informations.tag||<></>}
-          </div>
+        </span>
+            {informations.tag || <></>}
         </div>
       </div>
     </li>

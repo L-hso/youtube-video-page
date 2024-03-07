@@ -34,7 +34,7 @@ export const LateralVideosInfo = {
     visualizacoes: "74 mil visualizações",
     envio: "há 2 anos",
     duracao: "7:27",
-    tag: (<span className="inline-flex items-center gap-1 px-[2px] bg-youtube-gray font-sans font-medium text-xs">Novo</span>)
+    tag: (<span className="inline items-center gap-1 px-[2px] bg-youtube-gray font-sans font-medium text-xs">Novo</span>)
   },
   5: {
     imagem: "#",

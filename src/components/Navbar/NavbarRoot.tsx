@@ -1,6 +1,7 @@
 import { Dispatch, ReactNode } from "react";
 
 import { Menu } from "lucide-react";
+
 interface NavbarRoot {
   children: ReactNode;
   toggleMenuVisibility: Dispatch<boolean>;
