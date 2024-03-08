@@ -69,5 +69,69 @@ export const LateralVideosInfo = {
     envio: "há 1 semana",
     duracao: "17:15",
     tag:(<span className="inline items-center gap-1 h-4 px-[4px] bg-youtube-gray font-sans  font-medium text-xs">Novo</span>)
-  }
+  },
+  9: {
+    imagem: "#",
+    titulo: "Você sabia que golfinhos são horríveis?",
+    canal: "Você Sabia",
+    visualizacoes: "100 mil visualizações",
+    envio: "há 2 meses",
+    duracao: "5:20"
+  },
+  10: {
+    imagem: "#",
+    titulo: "Os Mistérios do Universo",
+    canal: "Ciência e Espaço",
+    visualizacoes: "150 mil visualizações",
+    envio: "há 1 mês",
+    duracao: "8:45"
+  },
+  11: {
+    imagem: "#",
+    titulo: "Como Fazer um Bolo de Chocolate",
+    canal: "Cozinha Fácil",
+    visualizacoes: "200 mil visualizações",
+    envio: "há 3 semanas",
+    duracao: "12:10"
+  },
+  12: {
+    imagem: "#",
+    titulo: "Treino de Alta Intensidade em Casa",
+    canal: "Fitness Total",
+    visualizacoes: "300 mil visualizações",
+    envio: "há 4 dias",
+    duracao: "15:20"
+  },
+  13: {
+    imagem: "#",
+    titulo: "Como Aprender um Novo Idioma Rapidamente",
+    canal: "Poliglota",
+    visualizacoes: "250 mil visualizações",
+    envio: "há 1 dia",
+    duracao: "6:40"
+  },
+  14: {
+    imagem: "#",
+    titulo: "Receitas Saudáveis para o Café da Manhã",
+    canal: "Vida Saudável",
+    visualizacoes: "180 mil visualizações",
+    envio: "há 10 horas",
+    duracao: "10:15"
+  },
+  15: {
+    imagem: "#",
+    titulo: "Os Segredos da Fotografia Profissional",
+    canal: "Fotografia Master",
+    visualizacoes: "220 mil visualizações",
+    envio: "há 8 horas",
+    duracao: "11:50"
+  },
+  16: {
+    imagem: "#",
+    titulo: "Dicas de Organização para a Casa",
+    canal: "Organização Total",
+    visualizacoes: "150 mil visualizações",
+    envio: "há 3 horas",
+    duracao: "8:30"
+  },
 };
