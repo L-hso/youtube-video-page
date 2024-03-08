@@ -34,7 +34,7 @@ export const LateralVideosInfo = {
     visualizacoes: "74 mil visualizações",
     envio: "há 2 anos",
     duracao: "7:27",
-    tag: (<span className="inline items-center gap-1 px-[2px] bg-youtube-gray font-sans font-medium text-xs">Novo</span>)
+    tag: (<span className="inline items-center gap-1 h-4 px-[4px] bg-youtube-gray font-sans  font-medium text-xs">Novo</span>)
   },
   5: {
     imagem: "#",
@@ -51,7 +51,7 @@ export const LateralVideosInfo = {
     canal: "Ministério da Justiça",
     visualizacoes: "2.35 bi de visualizações",
     envio: "há 11 meses",duracao: "13:22",
-    tag:(<div className="inline-flex items-center gap-1 px-[2px] bg-red-600 font-sans font-medium text-xs"><Radio size={15}/> AO VIVO</div>)
+    tag:(<div className="inline-flex items-center gap-1 h-4 px-[4px] bg-red-600 font-sans font-medium text-xs"><Radio size={15}/>AO VIVO</div>)
   },
   7:{
     imagem: "#",
@@ -60,5 +60,14 @@ export const LateralVideosInfo = {
     visualizacoes: "420 visualizações",
     envio: "há 3 semanas",
     duracao: "10:54"
+  },
+  8:{
+    imagem: "#",
+    titulo: "Hora do capa",
+    canal: "Darlene capa fácil",
+    visualizacoes: "2 mil visualizações",
+    envio: "há 1 semana",
+    duracao: "17:15",
+    tag:(<span className="inline items-center gap-1 h-4 px-[4px] bg-youtube-gray font-sans  font-medium text-xs">Novo</span>)
   }
 };

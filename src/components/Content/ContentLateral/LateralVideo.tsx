@@ -11,7 +11,7 @@ interface LateralVideo {
     duracao: string;
     tag?: ReactNode;
   };
-  index: number;
+  index: string;
 }
 
 export function LateralVideo({ informations, index }: LateralVideo) {
@@ -23,9 +23,9 @@ export function LateralVideo({ informations, index }: LateralVideo) {
       {/* <img src={informations.imagem} alt="video" className="object-cover w-40 h-24 rounded-lg"/> */}
       <div
     
-        className={`group w-40 h-24 rounded-lg flex-shrink-0 bg-violet-500 
-      relative 
-      `}
+        className="group w-40 h-24 rounded-lg flex-shrink-0 bg-violet-500 
+      relative cursor-pointer
+      "
       >
         <span className="inline-block  transition-opacity duration-400 group-hover:opacity-0 absolute bottom-2 right-2 bg-[rgba(0,0,0,0.66)] px-[2.5px] text-[0.70rem] font-sans text-center">{informations.duracao}</span>
         <div className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-out absolute right-1 top-1 flex flex-col gap-1">
@@ -34,7 +34,7 @@ export function LateralVideo({ informations, index }: LateralVideo) {
         </div>
         
       </div>
-      <div className="flex flex-col h-24 items-start">
+      <div className="flex flex-col h-24 items-start justify-between">
 
 
         <span>
@@ -42,14 +42,14 @@ export function LateralVideo({ informations, index }: LateralVideo) {
         </span>
 
 
-        <div className="justify-self-end">
-        <span className="text-sm text-youtube-light-gray line-clamp-1">
-        <a href="#" className="text-sm text-youtube-light-gray line-clamp-1">
+        <div className="justify-self-center">
+        <span className="text-[0.875rem] text-youtube-light-gray line-clamp-1 leading-4">
+        <a href="#" className="text-[0.875rem] text-youtube-light-gray line-clamp-1">
           {informations.canal}
         </a>
               {informations.visualizacoes} - {informations.envio}
         </span>
-            {informations.tag || <></>}
+            {informations.tag || <div className="w-1 h-4 px-[4px]"/>}
         </div>
       </div>
     </li>
