@@ -39,12 +39,12 @@ function App() {
         sideMenuOff={setMenuVisibility}
       >
         <Content.Principal.Root>
-          
           <Content.Principal.Video />
           <Content.Principal.Info/>
-          <Content.Lateral.Root responsiveVisibility={['lg:hidden', 'flex']}><></></Content.Lateral.Root>
+          <Content.Principal.Comments />
+          <Content.Lateral.Root responsiveVisibility={['lg:hidden', 'flex']}/>
         </Content.Principal.Root>
-        <Content.Lateral.Root responsiveVisibility={['lg:flex', 'hidden']}><></></Content.Lateral.Root>
+        <Content.Lateral.Root responsiveVisibility={['lg:flex', 'hidden']}/>
       </Content.Root>
     </>
   );

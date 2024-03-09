@@ -1,3 +1,4 @@
+import { ContentPrincipalComments } from "./ContentPrincipalComments/ContentPrincipalComments";
 import { ContentPrincipalRoot } from "./ContentPrincipalRoot";
 import { ContentPrincipalVideo } from "./ContentPrincipalVideo/ContentPrincipalVideo";
 import { ContentPrincipalVideoInfo } from "./ContentPrincipalVideoInfo/ContentPrincipalInfo";
@@ -5,5 +6,6 @@ import { ContentPrincipalVideoInfo } from "./ContentPrincipalVideoInfo/ContentPr
 export const Principal = {
   Root: ContentPrincipalRoot,
   Video: ContentPrincipalVideo,
-  Info: ContentPrincipalVideoInfo
+  Info: ContentPrincipalVideoInfo,
+  Comments: ContentPrincipalComments
 }

@@ -47,7 +47,7 @@ export function LateralVideo({ informations, index }: LateralVideo) {
         <a href="#" className="text-[0.875rem] text-youtube-light-gray line-clamp-1">
           {informations.canal}
         </a>
-              {informations.visualizacoes} - {informations.envio}
+              {informations.visualizacoes} • {informations.envio}
         </span>
             {informations.tag || <div className="w-1 h-4 px-[4px]"/>}
         </div>
