@@ -41,8 +41,8 @@ function App() {
         <Content.Principal.Root>
           <Content.Principal.Video />
           <Content.Principal.Info/>
-          <Content.Principal.Comments />
           <Content.Lateral.Root responsiveVisibility={['lg:hidden', 'flex']}/>
+          <Content.Principal.Comments />
         </Content.Principal.Root>
         <Content.Lateral.Root responsiveVisibility={['lg:flex', 'hidden']}/>
       </Content.Root>
