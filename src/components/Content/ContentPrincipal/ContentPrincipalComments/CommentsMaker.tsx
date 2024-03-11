@@ -1,33 +1,34 @@
 import { Dispatch, SetStateAction, useRef, useState } from "react";
 import { BsEmojiLaughing } from "react-icons/bs";
-import { commentsInfo, setCommentsInfo } from "./CommentsInfo";
+import { commentsInfo } from "./CommentInfo";
 
 export function CommentsMaker({
   updateCommentsAmount,
+  commentsAmount,
 }: {
   updateCommentsAmount: Dispatch<SetStateAction<number>>;
+  commentsAmount: number;
 }) {
   const [commentMakerFocus, setCommentMakerFocus] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
 
-  function updateComments():void {
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+
+
+  function updateComments(): void {
     updateCommentsAmount((num: number): number => {
-      
       return num + 1;
     });
-    setCommentsInfo(state=>[...state, {Comment:inputRef.current!.value, Date:new Date()}])
+    commentsInfo[`C-${commentsAmount}`] = {
+      Comment: inputRef.current!.value,
+      Date: Date.now(),
+    };
 
-
-
-
-    console.log(commentsInfo);
-
-
-
-
+    
     inputRef.current!.value = "";
-    buttonRef.current!.disabled = true;
+    setButtonDisabled(true);
   }
 
   return (
@@ -46,8 +47,7 @@ export function CommentsMaker({
           className="peer bg-transparent border-b-[1.75px] border-b-youtube-gray pt-0 py-1 outline-none transition-all duration-400 ease-in focus:border-b-youtube-light-gray"
           onFocus={() => setCommentMakerFocus(true)}
           onInput={() =>
-            (buttonRef.current!.disabled =
-              inputRef.current!.value.split("").join("") == "")
+            setButtonDisabled(inputRef.current!.value.split("").join("") == "")
           }
         />
         <div className="py-2  justify-between items-center hidden peer-data-[focus=true]:flex">
@@ -57,20 +57,16 @@ export function CommentsMaker({
               className="hover:bg-neutral-600"
               onClick={() => {
                 setCommentMakerFocus(false);
-                buttonRef.current!.disabled = true;
+                setButtonDisabled(true);
                 inputRef.current!.value = "";
               }}
             >
               Cancelar
             </button>
-
-
-            
             <button
-              ref={buttonRef}
-              
+              disabled={buttonDisabled}
               className="disabled:bg-neutral-600 bg-sky-500 text-youtube-dark"
-              onClick={()=>updateComments()}
+              onClick={() => updateComments()}
             >
               Comentar
             </button>

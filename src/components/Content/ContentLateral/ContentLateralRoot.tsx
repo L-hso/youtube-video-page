@@ -26,7 +26,7 @@ export function ContentLateralRoot({
       </article>
       <ul className=" flex flex-col gap-1.5">
         {Object.entries(LateralVideosInfo).map(([index, info]) => (
-          <LateralVideo index={index} informations={info} />
+          <LateralVideo index={`L-${index}`} informations={info} />
         ))}
       </ul>
     </aside>

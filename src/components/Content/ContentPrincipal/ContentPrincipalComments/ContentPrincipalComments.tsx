@@ -10,7 +10,9 @@ export function ContentPrincipalComments() {
         <span className="font-bold text-xl font-sans">
           {amountComments} Comentários
         </span>
+        
         <CommentsMaker 
+        commentsAmount={amountComments}
         updateCommentsAmount={setAmountComments} />
       </header>
       <Comments/>
