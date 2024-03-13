@@ -15,18 +15,14 @@ export function CommentsMaker({
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-
-
   function updateComments(): void {
-    updateCommentsAmount((num: number): number => {
-      return num + 1;
-    });
     commentsInfo[`C-${commentsAmount}`] = {
       Comment: inputRef.current!.value,
       Date: Date.now(),
     };
 
-    
+    updateCommentsAmount(Object.keys(commentsInfo).length);
+
     inputRef.current!.value = "";
     setButtonDisabled(true);
   }
@@ -51,7 +47,8 @@ export function CommentsMaker({
           }
         />
         <div className="py-2  justify-between items-center hidden peer-data-[focus=true]:flex">
-          <BsEmojiLaughing size={20} />
+          <button className="p-2.5 rounded-full hover:bg-youtube-dark" onClick={()=>{inputRef.current!.focus(); }}><BsEmojiLaughing size={20} /></button>
+          
           <div className="flex gap-4 *:rounded-full *:px-4 *:py-1.5 *:font-medium">
             <button
               className="hover:bg-neutral-600"
