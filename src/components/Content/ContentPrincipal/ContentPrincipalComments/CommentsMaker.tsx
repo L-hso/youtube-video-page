@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useRef, useState } from "react";
 import { BsEmojiLaughing } from "react-icons/bs";
 import { commentsInfo } from "./CommentInfo";
-import EmojiPicker, {EmojiStyle, Theme} from "emoji-picker-react";
+import EmojiPicker, { EmojiStyle, Theme } from "emoji-picker-react";
 
 export function CommentsMaker({
   updateCommentsAmount,
@@ -26,6 +26,8 @@ export function CommentsMaker({
 
     inputRef.current!.value = "";
     setButtonDisabled(true);
+
+    emojiPickerRef.current!.style.display = "none";
   }
 
   return (
@@ -48,10 +50,31 @@ export function CommentsMaker({
           }
         />
         <div className="py-2  justify-between items-center hidden peer-data-[focus=true]:flex">
-        <div className="relative">
-          <button className="p-2.5 rounded-full hover:bg-youtube-dark" onClick={()=>{inputRef.current!.focus(); emojiPickerRef.current!.style.display = emojiPickerRef.current!.style.display=="block"? "none": "block"}}><BsEmojiLaughing size={20} /></button>
-          <div ref={emojiPickerRef}className="block absolute"><EmojiPicker theme={Theme.DARK} emojiStyle={EmojiStyle.NATIVE}/></div>
-         </div>
+          <div className="relative">
+            <button
+              className="p-2.5 rounded-full hover:bg-youtube-dark"
+              onClick={() => {
+                inputRef.current!.focus();
+                emojiPickerRef.current!.style.display =
+                  emojiPickerRef.current!.style.display == "block"
+                    ? "none"
+                    : "block";
+              }}
+            >
+              <BsEmojiLaughing size={20} />
+            </button>
+            <div ref={emojiPickerRef} className="block absolute">
+              <EmojiPicker
+                theme={Theme.DARK}
+                emojiStyle={EmojiStyle.NATIVE}
+                onEmojiClick={(e) => {
+                  inputRef.current!.value += e.emoji;
+                  setButtonDisabled(false);
+                  inputRef.current!.focus();
+                }}
+              />
+            </div>
+          </div>
           <div className="flex gap-4 *:rounded-full *:px-4 *:py-1.5 *:font-medium">
             <button
               className="hover:bg-neutral-600"
@@ -59,6 +82,7 @@ export function CommentsMaker({
                 setCommentMakerFocus(false);
                 setButtonDisabled(true);
                 inputRef.current!.value = "";
+                emojiPickerRef.current!.style.display = "none";
               }}
             >
               Cancelar

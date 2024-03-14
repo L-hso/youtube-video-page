@@ -1,4 +1,4 @@
-import { ThumbsDown, ThumbsUp } from "lucide-react";
+import { Download } from "lucide-react";
 import { useState } from "react";
 import {
   AiFillDislike,
@@ -72,6 +72,18 @@ export function InfoToolbar() {
           <PiShareFat size={20} />
           <span>Compartilhar</span>
         </button>
+        <button className="flex items-center h-9 gap-2 py-1.5 px-3 rounded-full text-white font-semibold bg-youtube-gray hover:bg-[#555]">
+          <Download size={20} />
+          <span>Download</span>
+        </button>
+        <button  className="flex items-center h-9 gap-2 py-1.5 px-3 rounded-full text-white font-semibold bg-youtube-gray hover:bg-[#555]">
+          <PiShareFat size={20} />
+          <span>Valeu</span>
+        </button>
+        <button className="flex items-center h-9 gap-2 py-1.5 px-3 rounded-full text-white font-semibold bg-youtube-gray hover:bg-[#555]">
+        <PiShareFat size={20} />
+        <span>Clipe</span>
+      </button>
       </li>
     </menu>
   );
