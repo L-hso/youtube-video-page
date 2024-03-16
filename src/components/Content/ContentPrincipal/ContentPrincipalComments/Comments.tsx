@@ -37,7 +37,7 @@ export function Comments() {
           <img
             src="https://i1.sndcdn.com/artworks-QZ4Y5bsDEMAIb7d8-G5oQQw-t500x500.jpg"
             alt="foto de perfil"
-            className="w-9 h-9  rounded-full"
+            className="w-9 h-9 rounded-full"
           />
           <div>
             <span className="block font-bold text-base font-sans">
