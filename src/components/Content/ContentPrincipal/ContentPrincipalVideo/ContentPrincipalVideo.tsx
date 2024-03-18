@@ -5,10 +5,16 @@ export function ContentPrincipalVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const [actualTime, setActualTime] = useState(0);
-  
-  function currentTimeHandler (this: HTMLVideoElement) {
-    setActualTime(this.currentTime);
-    console.log(this.duration)
+  function durationHandler(e:HTMLVideoElement){
+    console.log(e.duration);
+    return e.duration;
+  }
+
+  let duration;
+    
+  function currentTimeHandler (e: HTMLVideoElement) {
+    
+
   }
   
   return (
@@ -17,16 +23,16 @@ export function ContentPrincipalVideo() {
       <video
         src="src\assets\Não fui feito para Programar != Bloqueado no Código.mp4"
         ref={videoRef}
-        onLoadedMetadata={()=>currentTimeHandler}
+        onLoadedMetadata={(e)=>{duration = durationHandler(e.currentTarget)}}
         controls
         className="-z-10"
         id="video"
-        onPlay={()=>{setInterval(()=>setActualTime(state=>state+1),1000)}}
-
+        
+        onTimeUpdate={(e)=>{console.log(e.currentTarget.currentTime);}}
         disablePictureInPicture
         
       />
-      <VideoBar actualTime={actualTime} totalTime={100000}/>
+      <VideoBar actualTime={actualTime} totalTime={duration}/>
       <div className="absolute bottom-0 w-full h-0 transition-all duration-100 ease-in-out invisible bg-gradient-to-b from-transparent from-65% to-black group-hover:h-full group-hover:visible"/>
     </div>
   );
